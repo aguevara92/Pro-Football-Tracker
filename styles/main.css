@@ -1,0 +1,153 @@
+body, html{
+	display: table;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/******************************* ONE ******************************/
+
+.one main div{
+	width: 50%;
+	display: inline-block;
+	float: left;
+	height: 100vh;
+	padding:40px;
+	box-sizing: border-box;
+}
+
+.first{
+	background-color: #F0DBE9
+}
+
+.second{
+	background-color: #CAE3F6
+}
+
+
+/******************************* TWO ******************************/
+
+
+.two header{
+	width: 100%;
+	background-color: blue;
+	margin: 0;
+	display: inline-block;
+	padding: 20px 50px;
+	box-sizing: border-box;
+}
+
+.two header h1{
+	color: white;
+}
+
+.two nav{
+	width: 20%;
+	display: inline-block;
+	float: left;
+	height: 100vh;
+	padding:40px;
+	box-sizing: border-box;
+	background-color: #F0DBE9
+}
+
+.two main{
+	width: 60%;
+	display: inline-block;
+	float: left;
+	height: 100vh;
+	padding:40px;
+	box-sizing: border-box;
+	background-color: #CAE3F6
+}
+
+.two .sidebar{
+	width: 20%;
+	display: inline-block;
+	float: left;
+	height: 100vh;
+	padding:40px;
+	box-sizing: border-box;
+	background-color: #FEFAD0
+}
+
+.two footer{
+	display: inline-block;
+	width: 100%;
+	clear: both;
+	background-color: green;
+	color: white;
+	padding: 20px 50px;
+	box-sizing: border-box;
+}
+
+body > span{
+	display: none;
+}
+
+form{
+	padding: 20px 0 ;
+	border-bottom: solid 1px black
+}
+
+
+/******************************* RESPONSIVE ******************************/
+
+@media screen and (max-width: 700px) {
+
+	body > *:not(span) {
+		display: block !important;
+    	height: auto !important;
+    	width: 100% !important;
+	}
+
+	body > span{
+		display: block;
+		position: absolute;
+		right: 25px;
+		top: 25px;
+	}
+
+	.hamburger-menu img{
+		height: auto;
+		width: 40px;
+	}
+
+	#menu{
+		display: block;
+		position: fixed;
+		height: 100% !important;
+		width: 50% !important;
+		right: -50%;
+		top: 0;	
+		-webkit-transition: all 400ms ease-out;
+		-moz-transition: all 400ms ease-out;
+		-ms-transition: all 400ms ease-out;
+		-o-transition: all 400ms ease-out;
+		transition: all 400ms ease-out;
+	}
+
+	#menu:target{
+		right: 0%;
+		-webkit-transition: all 400ms ease-out;
+		-moz-transition: all 400ms ease-out;
+		-ms-transition: all 400ms ease-out;
+		-o-transition: all 400ms ease-out;
+		transition: all 400ms ease-out;
+	}
+
+	#menu span{
+		position: absolute;
+	    right: 25px;
+	    top: 25px;
+	}
+
+	#menu span img{
+		height: auto;
+		width: 30px;
+	}
+
+
+}
